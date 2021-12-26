@@ -10,6 +10,7 @@
 */
 body {
 	overflow:hidden;
+	-webkit-user-select: none;
 }
 
 @keyframes blink {
@@ -655,6 +656,7 @@ blockquote {
 
 .go-center {
 	text-align: center !important;
+	color: #111;
 }
 
 .go-right {

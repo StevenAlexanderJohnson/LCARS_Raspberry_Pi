@@ -22,24 +22,24 @@
 	</div>
 	<div class="right-frame-top">
 		<div class="banner">
-			LCARS &#149; Online
+			USS Bus &#149; Online
 		</div>
 		<div class="data-cascade-button-group">
 			<div class="button-col">
-				<div class="button top-left"><a onclick="PlaySound()">01</a></div>
-				<div class="button bottom-left"><a onclick="PlaySound()">02</a></div>
+				<div class="button top-left"><a onclick="TogglePin(0)">Front Lights</a></div>
+				<div class="button bottom-left"><a onclick="TogglePin(1)">Water Pump</a></div>
 			</div>
 			<div class="button-col">
-				<div class="button top-right"><a onclick="PlaySound()">03</a></div>
-				<div class="button bottom-right"><a onclick="PlaySound()">04</a></div>
+				<div class="button top-right"><a onclick="TogglePin(2)">Back Lights</a></div>
+				<div class="button bottom-right"><a onclick="TogglePin(3)">06</a></div>
 			</div>
 			<div class="button-col">
-				<div class="button top-left"><a onclick="PlaySound()">05</a></div>
-				<div class="button bottom-left"><a onclick="PlaySound()">06</a></div>
+				<div class="button top-left"><a onclick="TogglePin(4)">USB & Door</a></div>
+				<div class="button bottom-left"><a onclick="TogglePin(5)">07</a></div>
 			</div>
 			<div class="button-col">
-				<div class="button top-right"><a onclick="PlaySound()">07</a></div>
-				<div class="button bottom-right"><a onclick="PlaySound()">08</a></div>
+				<div class="button top-right"><a onclick="TogglePin(6)">Refrigerator</a></div>
+				<div class="button bottom-right"><a onclick="TogglePin(7)">08</a></div>
 			</div>
 		</div> <!-- /data-cascade-button-group -->
 		<div class="top-corner-bg">
@@ -59,7 +59,7 @@
 		<div>
 			<div class="panel-3">03<span class="hop">-111968</span></div>
 			<div class="panel-4">04<span class="hop">-041969</span></div>
-			<div class="panel-5">05<span class="hop">-1701D</span></div>
+			<div class="panel-5" onclick="CycleTimeout()">Timeout-<span class="hop" id="TimeoutValue"></span>M</div>
 			<div class="panel-6">06<span class="hop">-071984</span></div>
 			<div class="panel-7">07<span class="hop">-081940</span></div>
 			<div class="panel-8">08<span class="hop">-47148</span></div>
@@ -84,24 +84,20 @@
 			<!-- Start your content here. -->
 			<div class="data-cascade-button-group">
 				<div class="button-col">
-					<div class="button top-left"><a onclick="PlaySound()">01</a></div>
-					<div class="button bottom-left"><a onclick="PlaySound()">02</a></div>
+					<div class="button top-left"><a onclick="TimeoutPin(this, 0)">Front Light<span></span></a></div>
+					<div class="button bottom-left"><a onclick="TimeoutPin(this, 1)">Water Pump<span></span></a></div>
 				</div>
 				<div class="button-col">
-					<div class="button top-right"><a onclick="PlaySound()">03</a></div>
-					<div class="button bottom-right"><a onclick="PlaySound()">04</a></div>
+					<div class="button top-right"><a onclick="TimeoutPin(this, 2)">Back Light<span></span></a></div>
+					<div class="button bottom-right"><a onclick="TimeoutPin(this, 3)">04<span></span></a></div>
 				</div>
 				<div class="button-col">
-					<div class="button top-left"><a onclick="PlaySound()">05</a></div>
-					<div class="button bottom-left"><a onclick="PlaySound()">06</a></div>
+					<div class="button top-left"><a onclick="TimeoutPin(this, 4)">USB & Door<span></span></a></div>
+					<div class="button bottom-left"><a onclick="TimeoutPin(this, 5)">06<span></span></a></div>
 				</div>
 				<div class="button-col">
-					<div class="button top-right"><a onclick="PlaySound()">07</a></div>
-					<div class="button bottom-right"><a onclick="PlaySound()">08</a></div>
-				</div>
-				<div class="button-col">
-					<div class="button top-right"><a onclick="PlaySound()">09</a></div>
-					<div class="button bottom-right"><a onclick="PlaySound()">10</a></div>
+					<div class="button top-right"><a onclick="TimeoutPin(this, 6)">Refrigerator<span></span></a></div>
+					<div class="button bottom-right"><a onclick="TimeoutPin(this, 7)">08<span></span></a></div>
 				</div>
 			</div> <!-- /data-cascade-button-group -->
 			 <!-- End content area. -->
