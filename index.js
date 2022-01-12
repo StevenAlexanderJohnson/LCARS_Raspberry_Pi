@@ -64,7 +64,7 @@ app.post("/TimeoutPin", function(request, response) {
                 break;
             }
         }
-    }, timeoutTime * 1000), pin]);
+    }, timeoutTime * 60000), pin]);
     console.log(timeoutList);
     response.end(JSON.stringify({ pinRunning: true, timeLeft: timeoutTime }));
 });
