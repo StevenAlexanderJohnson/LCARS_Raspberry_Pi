@@ -59,7 +59,7 @@ async function TimeoutPin(element, pinIndex) {
     for(var i = 0; i < timeToWait; i++)
     {
         element.children[0].innerHTML = '-' + (timeToWait - i) + 'M';
-        await new Promise(r => setTimeout(r, 1000));
+        await new Promise(r => setTimeout(r, 60000));
     }
     element.children[0].innerHTML = '';
     await fetch('/TurnPinOff', requestOptions)
